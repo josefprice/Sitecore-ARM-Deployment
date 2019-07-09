@@ -1,0 +1,54 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentId": {
+      "value": ""
+    },
+    "location": {
+      "value": "UK South"
+    },
+    "sitecoreAdminPassword": {
+      "value": ""
+    },
+    "licenseXml": {
+      "value": ""
+    },
+    "repAuthenticationApiKey": {
+      "value": "{f7a3c2b1-e08c-4d12-a8a5-488fc7e6fce6}"
+    },
+    "sqlServerLogin": {
+      "value": ""
+    },
+    "sqlServerPassword": {
+      "value": ""
+    },
+    "cmMsDeployPackageUrl": {
+      "value": ""
+    },
+    "cdMsDeployPackageUrl": {
+      "value": ""
+    },
+    "prcMsDeployPackageUrl": {
+      "value": ""
+    },
+    "repMsDeployPackageUrl": {
+      "value": ""
+    },
+    "powerShellExtensionsMsDeployPackageUrl" : {
+      "value": ""
+    },
+    "cmPsModuleMsDeployPackageUrl" : {
+      "value": ""
+    },
+    "cdPsModuleMsDeployPackageUrl" : {
+      "value": ""
+    },
+    "disablePrefetchCachingMsDeployPackageUrl":{
+      "value": "https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates/releases/download/v2.0.1/DisablePrefetchCache.scwdp.zip"
+    },
+    "allowInvalidClientCertificates": {
+      "value": true
+    }
+  }
+}
