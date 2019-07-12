@@ -5,5 +5,6 @@ foreach($module in $psModules) {
     Import-Module $module.FullName -Force
 }
 
+#Set Global Variables to allow scripts to access outside of this module
 $Global:Settings = Get-IniFile (Join-Path -Path (Split-Path $PSScriptRoot -Parent) -ChildPath "Settings.ini")
 $Global:RootPath = Split-Path $PSScriptRoot -Parent

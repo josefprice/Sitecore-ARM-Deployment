@@ -1,6 +1,5 @@
-﻿Import-Module "$($PSScriptRoot)\..\Modules\Import-Modules.psm1" -Force
+﻿Import-Module (Join-Path -Path (Split-Path $PSScriptRoot -Parent) -ChildPath "Modules\Import-ModulesAndSettings.psm1") -Force
 
-$PSScriptRootParent = Split-Path $PSScriptRoot -Parent
 $ArmTemplateUrl = "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%209.1.1/XP/azuredeploy.json"
 $ParamFileName = "azuredeploy.parameters.json"
 $Environment = "XP"
@@ -30,6 +29,7 @@ ProvisionNewSitecoreEnvironment `
     -DeploymentId $DeploymentId `
     -Environment $Environment `
     -Location $Location `
+    -AzureToolkit $Settings.Locations.AzureToolkitPath `
     -StorageResourceGroup $StorageResourceGroup `
     -StorageAccountName $StorageAccountName `
     -StorageContainerName $StorageContainerName

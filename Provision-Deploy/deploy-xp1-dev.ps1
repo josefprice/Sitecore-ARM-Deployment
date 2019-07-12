@@ -27,7 +27,7 @@
     [switch]$PromptAzureLogin
 )
 
-Import-Module "$($PSScriptRoot)\..\Modules\Import-Modules.psm1" -Force
+Import-Module (Join-Path -Path (Split-Path $PSScriptRoot -Parent) -ChildPath "Modules\Import-ModulesAndSettings.psm1") -Force
 
 $ARMTemplateFile = "application-cmcd-slots.json"
 $ParamFileName = "azuredeploy-redeploy-application.parameters.json"
